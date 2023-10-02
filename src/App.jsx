@@ -5,10 +5,9 @@ import './styles/index.scss'
 function App() {
   const [listNotes, setListNotes] = useState([]);
 
-  const addNote = (title, price) => {
+  const addNote = (title, price, category) => {
     const id = crypto.randomUUID()
-    console.log(id)
-    const newNote = {title, price, id}
+    const newNote = {title, price, category, id}
     setListNotes([...listNotes, newNote]);
   }
   const removeNote = (id) => {

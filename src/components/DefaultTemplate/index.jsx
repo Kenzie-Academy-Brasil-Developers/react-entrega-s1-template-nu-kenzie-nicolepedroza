@@ -1,12 +1,13 @@
 import { Header } from "../Header"
 import { Total } from "../Total"
+import styles from './style.module.scss'
 
-export const DefaultTemplate = ({children}) => {
+export const DefaultTemplate = ({children, listNotes}) => {
     return(
         <>
         <Header/>
-        <main>{children}</main>
-        <Total/>
+        <main className={styles.main}>{children}</main>
+        <Total listNotes={listNotes}/>
         </>
     )
 }

@@ -3,16 +3,6 @@
     align-items: center;
     justify-content: center;
     
-    &.small{
-        width: 48px;
-        border-radius: 0.125rem;
-        height: 19px;
-        font-family: var(--font-secondary);
-        font-size: 0.625rem;
-        font-weight: 400;
-        color: var(--color-grey4);
-        background-color: var(--color-grey2);
-    }
     &.large{
         width: 314px;
         height: 48px;
