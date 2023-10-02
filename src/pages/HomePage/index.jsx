@@ -3,11 +3,11 @@ import { FinanceList } from "../../components/FInanceList"
 import { FinanceForm } from "../../components/FinanceForm"
 
 
-export const HomePage = () => {
+export const HomePage = ({listNotes, addNote, removeNote}) => {
     return(
         <DefaultTemplate>
-            <FinanceForm/>
-            <FinanceList/>
+            <FinanceForm addNote={addNote}/>
+            <FinanceList listNotes={listNotes} removeNote={removeNote} />
         </DefaultTemplate>
     )
 }

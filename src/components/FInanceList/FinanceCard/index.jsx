@@ -1,7 +1,11 @@
-export const FinanceCard = () => {
+export const FinanceCard = ({title, price, id, removeNote}) => {
     return(
         <>
-            <button className="title2Nunito">Excluir</button>
+            <div>
+                <h3 className="titleNunito">{title}</h3>
+                <p className="title2Nunito">{price}</p>
+            </div>
+            <button onClick={() => removeNote(id)} className="btn small">Excluir</button>
         </>
     )
 }
