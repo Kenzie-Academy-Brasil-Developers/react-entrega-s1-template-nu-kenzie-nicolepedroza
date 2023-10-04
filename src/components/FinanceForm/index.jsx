@@ -1,19 +1,19 @@
-import { useState } from "react";
-import { Input } from "../Input";
+import { useState } from "react"
+import { Input } from "../Input"
 import styles from './style.module.scss'
 
 
 export const FinanceForm = ({addNote}) => {
-    const [title, setTitle] = useState("");
-    const [price, setPrice] = useState(1);
-    const [category, setCategory] = useState("Entrada");
+    const [title, setTitle] = useState("")
+    const [price, setPrice] = useState(1)
+    const [category, setCategory] = useState("Entrada")
 
     const submit = (e) => {
         e.preventDefault()
 
-        addNote(title, price, category);
-        setTitle("");
-        setPrice("");
+        addNote(title, price, category)
+        setTitle("")
+        setPrice("")
         setCategory("Entrada")
     }
 
@@ -42,7 +42,7 @@ export const FinanceForm = ({addNote}) => {
                     setValue={setPrice}
                 />
             <p className="title1">Tipo de valor</p>
-            <select id="category" onChange={(e) => setCategory(e.target.value)}>
+            <select id="category" value={category} onChange={(e) => setCategory(e.target.value)}>
                 <option className="title3" value="Entrada">Entrada</option>
                 <option className="title3" value="Saída">Saída</option>
             </select>

@@ -13,7 +13,7 @@ export const FinanceList = ({ listNotes, removeNote }) => {
                 {listNotes.length > 0 ? (
             <ul>
                 {listNotes.map((note) => {
-                    const { title, price, category, id } = note;
+                    const { title, price, category, id } = note
                     return <FinanceCard 
                             key={id}
                             id={id} 

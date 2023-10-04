@@ -6,13 +6,15 @@ export const Total = ({ listNotes }) => {
             return prevValue + price
         } else if(note.category === "Saída"){
             return prevValue - price
+        } else{
+            return prevValue
         }
     }, 0)
 
     return (
         <>
             <div className={styles.flexbox}>
-                <div className={styles.div}>
+                <div>
                     <h3 className="titleNunito">Valor total: </h3>
                     <p className="title2Nunito">O valor se refere ao saldo</p>
                 </div>

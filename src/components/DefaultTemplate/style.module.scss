@@ -1,3 +1,14 @@
 .main{
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    min-width: 60%;
+    max-width: 90%;
+    gap: 4rem;
+}
+@media (max-width: 700px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
 }
